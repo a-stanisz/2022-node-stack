@@ -4,5 +4,6 @@
     "lib": ["ESNext"],
     "outDir": "dist"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "esModuleInterop": true
 }
