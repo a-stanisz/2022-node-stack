@@ -1,0 +1,16 @@
+{
+  "name": "2022-node-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "volta": {
+    "node": "18.3.0"
+  },
+  "dependencies": {
+    "typescript": "^4.7.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.0",
+    "@types/node": "^17.0.41"
+  }
+}
