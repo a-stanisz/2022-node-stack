@@ -1,11 +1,11 @@
 import { PrismaClient } from '@prisma/client';
+// import { nanoid } from 'nanoid/async';
+
 // import { randomUUID } from 'crypto';
 import express from 'express';
 import morgan from 'morgan';
 
 const db = new PrismaClient({ log: ['error', 'info', 'query', 'warn'] });
-
-// const genId = () => randomUUID();
 
 // const seedDB = async () => {
 //   if ((await db.user.count()) === 0) {
@@ -27,13 +27,13 @@ const db = new PrismaClient({ log: ['error', 'info', 'query', 'warn'] });
 //     await db.post.createMany({
 //       data: [
 //         {
-//           id: genId(),
+//           id: await nanoid(),
 //           slug: 'node-stack',
 //           title: '2022-node-stack',
 //           createdAt: new Date(),
 //         },
 //         {
-//           id: genId(),
+//           id: await nanoid(),
 //           slug: 'draft-post',
 //           title: 'Draft Post',
 //         },
