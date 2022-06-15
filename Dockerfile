@@ -4,8 +4,9 @@ WORKDIR /usr/src/app
 
 COPY package.json yarn.lock ./
 RUN yarn install
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
-COPY prisma/schema.prisma ./prisma/
+COPY ./prisma/ ./prisma/
 RUN npx prisma generate
 
 COPY . .

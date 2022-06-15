@@ -11,6 +11,7 @@
     "db:console": "docker compose exec postgres psql -h localhost -U postgres webapp_dev",
     "rebuild:be": "docker compose build backend && docker compose rm --stop backend && docker compose up -d backend",
     "start": "node dist/index.js",
+    "docker:seed_db": "docker compose exec backend npx prisma migrate dev",
     "start:docker": "yarn build && node --inspect=0.0.0.0 dist/index.js",
     "stop:docker": "docker compose down -v"
   },
